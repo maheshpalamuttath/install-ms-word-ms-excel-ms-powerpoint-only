@@ -121,3 +121,10 @@ You will see:
 * Microsoft PowerPoint
 
 ---
+---
+
+# 🔹 STEP 8: Activate Office
+
+Open Word → Sign in or enter product key.
+
+---
