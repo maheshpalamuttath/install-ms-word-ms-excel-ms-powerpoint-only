@@ -1,12 +1,10 @@
-# Install ONLY Word, Excel, PowerPoint (Office 2019) using ODT
+# ✅ Install ONLY Word, Excel, PowerPoint (Office 2019 via ODT)
 
 ---
 
 ## 🔹 STEP 1: Create folder
 
-Create this folder:
-
-```text
+```text id="odtfolder"
 C:\ODT
 ```
 
@@ -18,23 +16,21 @@ Download from Microsoft:
 
 [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117&utm_source=chatgpt.com)
 
-Run it and extract everything into:
+Extract it to:
 
-```text
+```text id="extractodt"
 C:\ODT
 ```
 
-You should see:
-
-* setup.exe
+(You should see `setup.exe`)
 
 ---
 
-## 🔹 STEP 3: Create configuration file
+## 🔹 STEP 3: Create config file
 
-Open **Notepad** → paste this:
+Open Notepad → paste:
 
-```xml id="office2019lite"
+```xml id="configxml"
 <Configuration>
   <Add OfficeClientEdition="32" Channel="PerpetualVL2019">
     <Product ID="ProPlus2019Volume">
@@ -56,11 +52,9 @@ Open **Notepad** → paste this:
 
 Save as:
 
-```text
+```text id="saveconfig"
 C:\ODT\config.xml
 ```
-
-⚠ Make sure it is **config.xml (not .txt)**
 
 ---
 
@@ -68,48 +62,62 @@ C:\ODT\config.xml
 
 * Press Windows key
 * Type `cmd`
-* Right click → Run as Administrator
+* Right-click → **Run as Administrator**
 
 ---
 
 ## 🔹 STEP 5: Go to ODT folder
 
-```cmd
+```cmd id="cdodt"
 cd C:\ODT
 ```
 
 ---
 
-## 🔹 STEP 6: Install Office
+# 🔥 STEP 6: Choose ONE of these scenarios
 
-Run:
+---
 
-```cmd
+## 🟢 SCENARIO A — Recommended (Online install)
+
+👉 Use this if you have internet
+
+```cmd id="scenarioA"
 setup.exe /configure config.xml
 ```
 
----
-
-## 🔹 STEP 7: Wait for installation
-
-* Downloads + installs automatically
-* Takes 10–30 minutes
+✔ Downloads + installs in one step
+✔ Simplest method
+✔ Best for your setup
 
 ---
 
-## 🔹 STEP 8: Open Office apps
+## 🟡 SCENARIO B — Offline / Pre-download method
 
-After install, you will see:
+👉 Use this if:
+
+* slow internet OR
+* you want backup installer files
+
+```cmd id="scenarioB1"
+setup.exe /download config.xml
+setup.exe /configure config.xml
+```
+
+✔ First downloads Office files
+✔ Then installs from local cache
+✔ Useful for reuse or multiple PCs
+
+---
+
+# 📌 STEP 7: Finish installation
+
+After completion, open Start Menu:
+
+You will see:
 
 * Microsoft Word
 * Microsoft Excel
 * Microsoft PowerPoint
-
----
----
-
-# 🔹 STEP 9: Activate Office
-
-Open Word → Sign in or enter product key.
 
 ---
