@@ -106,3 +106,10 @@ After install, you will see:
 * Microsoft PowerPoint
 
 ---
+---
+
+# 🔹 STEP 9: Activate Office
+
+Open Word → Sign in or enter product key.
+
+---
